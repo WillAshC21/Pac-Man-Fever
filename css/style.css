@@ -1,0 +1,212 @@
+body {
+  background: #000;
+}
+.animation {
+  margin: 25% auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.dots {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: black;
+
+}
+/* #dot1 {
+  animation: 1s pop;
+}
+#dot2 {
+  animation: 1s pop;
+}
+#dot3 {
+    animation: 2s pop;
+}
+#dot4 {
+    animation: 4s pop;
+} */
+@keyframes pop {
+  0% {
+    background-color: #fff;
+  }
+  99% {
+    background-color: #fff;
+  }
+  100% {
+      background-color: black;
+  }
+}
+#dot1, #dot2, #dot3, #dot4 {
+    position: relative;
+    left: 50%;
+    margin: 0px 20px;
+}
+.pac-man {
+  position: absolute;
+  top: 50%;
+  left: -450%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: yellow;
+  animation: 11s move infinite;
+}
+
+@keyframes move {
+  0% {
+    left: -450%;
+  }
+  100% {
+    left: 3770%;
+  }
+}
+.enemy {
+  width: 100px;
+  height: 130px;
+
+  border-radius: 50px 50px 0 0;
+}
+#clyde {
+  position: absolute;
+  top: 50%;
+  left: 270%;
+  transform: translate(-50%, -50%);
+  background-color: orange;
+  animation: 10s move-clyde infinite;
+}
+#blinky {
+  position: absolute;
+  top: 50%;
+  left: 670%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  animation: 10s move-blinky infinite;
+}
+#inky {
+  position: absolute;
+  top: 50%;
+  left: 1070%;
+  transform: translate(-50%, -50%);
+  background-color: pink;
+  animation: 10s move-inky infinite;
+}
+.mouth {
+  position: absolute;
+top:50%;
+left: 70%;
+transform: translate(-50%, -50%);
+  border-top: 30px solid transparent;
+border-bottom: 30px solid transparent;
+
+border-right: 72px solid black;
+animation: 0.2s eat infinite;
+}
+@keyframes eat {
+      0% {
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+      }
+      50% {
+        border-top: 0px solid transparent;
+        border-bottom: 0px solid transparent;
+      }
+      100% {
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+      }
+}
+#tail-one {
+  position: absolute;
+  top: 90%;
+  left: 17%;
+  transform: translate(-50%, -50%);
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+
+  border-bottom: 26px solid black;
+}
+#tail-two {
+  position: absolute;
+  top: 90%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+
+  border-bottom: 26px solid black;
+}
+#tail-three {
+  position: absolute;
+  top: 90%;
+  left: 87%;
+  transform: translate(-50%, -50%);
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+
+  border-bottom: 26px solid black;
+}
+.eyes {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.eye {
+  border-radius: 50%;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+.pupil {
+  position: relative;
+  top: 70%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: blue;
+  width: 17px;
+  height: 17px;
+}
+@keyframes  move-clyde{
+  0% {
+    left: 270%;
+    opacity: 1.0;
+  }
+  95% {
+    opacity: 1.0;
+  }
+  100% {
+    left: 3770%;
+    opacity: 0.0;
+  }
+}
+@keyframes  move-blinky{
+  0% {
+    left: 670%;
+    opacity: 1.0;
+  }
+  95% {
+    opacity: 1.0;
+  }
+  100% {
+    left: 3770%;
+    opacity: 0.0;
+  }
+}
+@keyframes  move-inky{
+  0% {
+    left: 1070%;
+    opacity: 1.0;
+  }
+  95% {
+    opacity: 1.0;
+  }
+  100% {
+    left: 3770%;
+    opacity: 0.0;
+  }
+}
